@@ -1,0 +1,57 @@
+```css
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+/* Pengaturan Cetak A4 */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    body {
+        background-color: white !important;
+        padding: 0 !important;
+    }
+    #print-area {
+        width: 210mm !important;
+        min-height: 297mm !important;
+        margin: 0 auto !important;
+        padding: 10mm !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    @page {
+        size: A4;
+        margin: 0;
+    }
+}
+
+.table-main {
+    border: 2px solid black;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-main th, .table-main td {
+    border: 1px solid black;
+}
+
+.dotted-border {
+    border-bottom: 1px dotted black;
+}
+
+/* Animasi sederhana untuk modal settings */
+.modal-enter {
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+```
